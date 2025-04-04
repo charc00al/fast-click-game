@@ -3,20 +3,20 @@
 }
 
 .game-space {
-    width: 60vw;
-    height: 60vh;
+    width: 640px;
+    height: 410px;
     background-color: pink;
     margin: 20vh auto;
     display: flex;
-    justify-content: center;
-    align-content: center;
 }
 
 .btn {
-    align-self: center;
     width: var(--button-size);
     height: var(--button-size);
     border-radius: 50%;
     border: 2px solid green;
     background-color: greenyellow;
+    position: relative;
+    left: 600px;
+    top: 370px;
 }
