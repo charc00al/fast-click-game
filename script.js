@@ -1,5 +1,6 @@
 var btn = document.querySelector(".btn");
 
 btn.addEventListener("click", function () {
-    alert("You clicked the button!");
+    btn.style.left = Math.floor(Math.random() * 600) + "px";
+    btn.style.top = Math.floor(Math.random() * 370) + "px";
 });
