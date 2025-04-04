@@ -2,21 +2,32 @@
     --button-size: 40px;
 }
 
+* {
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
 .game-space {
-    width: 60vw;
-    height: 60vh;
+    width: 640px;
+    height: 410px;
     background-color: pink;
-    margin: 20vh auto;
+    margin: 10vh auto;
     display: flex;
-    justify-content: center;
-    align-content: center;
 }
 
 .btn {
-    align-self: center;
     width: var(--button-size);
     height: var(--button-size);
     border-radius: 50%;
     border: 2px solid green;
     background-color: greenyellow;
+    position: relative;
+    left: 48%;
+    top: 45%;
+}
+
+.header {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
 }
