@@ -2,6 +2,10 @@
     --button-size: 40px;
 }
 
+* {
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
 .game-space {
     width: 640px;
     height: 410px;
@@ -17,8 +21,8 @@
     border: 2px solid green;
     background-color: greenyellow;
     position: relative;
-    left: 600px;
-    top: 370px;
+    left: 48%;
+    top: 45%;
 }
 
 .header {
