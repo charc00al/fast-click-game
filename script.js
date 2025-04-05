@@ -1,3 +1,4 @@
+// define html elements for manipulation & variables
 var btn = document.querySelector(".btn");
 var scoreText = document.querySelector(".score");
 var highScoreText = document.querySelector(".highest-score")
@@ -10,6 +11,7 @@ btn.addEventListener("click", function () {
     moveButton();
     keepScore();
     updateHighScore();
+
 });
 
 // moving the button to random position
@@ -26,7 +28,13 @@ function keepScore() {
 
 // updating high score
 function updateHighScore() {
-
-    localStorage.setItem("high-score", score);
-    highScoreText.textContent = "Highest score: " + localStorage.getItem("high-score") + 1; 
+    highScore = localStorage.getItem("hs");
+    if (score > highScore) {
+        highScore = score
+    };
+    localStorage.setItem("hs", highScore);
+    highScoreText.textContent = "Highest score: " + highScore;
 }
+
+highScoreText.textContent = "Highest score: " + localStorage.getItem("hs");
+
