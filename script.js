@@ -1,9 +1,9 @@
 var btn = document.querySelector(".btn");
-var score = document.querySelector(".score");
-var highScore = document.querySelector(".highest-score")
+var scoreText = document.querySelector(".score");
+var highScoreText = document.querySelector(".highest-score")
 
-var counter = 0;
-var score_counter
+var score = 0;
+var highScore = 0;
 
 // game, listen to click on button
 btn.addEventListener("click", function () {
@@ -20,12 +20,13 @@ function moveButton() {
 
 // keeping score 
 function keepScore() {
-    counter++;
-    score.textContent = "Score: " + counter;
+    score++;
+    scoreText.textContent = "Score: " + score;
 }
 
 // updating high score
 function updateHighScore() {
-    localStorage.setItem("high-score", counter);
-    highScore.textContent = "Highest score: " + localStorage.getItem("high-score") + 1; 
+
+    localStorage.setItem("high-score", score);
+    highScoreText.textContent = "Highest score: " + localStorage.getItem("high-score") + 1; 
 }
