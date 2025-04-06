@@ -4,6 +4,9 @@
 
 * {
     font-family: 'Trebuchet MS', sans-serif;
+    background-color: rgb(251, 240, 243);
+    background-color: rgb(59, 50, 54);
+    color: rgb(251, 240, 243);
 }
 
 .game-space {
