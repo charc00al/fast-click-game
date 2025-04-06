@@ -37,8 +37,6 @@ startBtn.addEventListener("click", function () {
     isPlaying = true;
 })
 
-
-
 // Starting the game function
 if (isPlaying == true) {
     gameOn();
