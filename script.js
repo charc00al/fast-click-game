@@ -1,22 +1,62 @@
-// define html elements for manipulation & variables
-var btn = document.querySelector(".btn");
-var scoreText = document.querySelector(".score");
-var highScoreText = document.querySelector(".highest-score")
-var timerText = document.querySelector(".timer")
+/* 
+1 Create a game function -ok
+-- high score stays the same all the time -ok
 
-var score = 0;
-var highScore = 0;
-var seconds = 30;
+2 Create game start button, that:
+-- hides game over (if it's there)
+-- resets score 
+-- makes the button clicable / appear
+-- triggers timer from beggining
 
-// create a game start function, that starts with first button-click on the circle? 
-    // or should it have a game start button? -- i think click on the circle triggers start
-// game start triggers countdown 
-// after 30s is game over 
-    // or change timer with levels?
-// what should happen, when the game is over?
-    // -- game over message
-    // -- play again button?
-    // -- reset score?
+3 Create game over function, 
+-- that sets if:
+    -- the timer is over
+-- that triggers
+    -- stop timer
+    -- game over screen
+    -- button is not clickable/dissapears
+
+4 make it prettyyy 
+*/
+
+// DOM selectors
+const btn = document.querySelector(".btn");
+const scoreText = document.querySelector(".score");
+const highScoreText = document.querySelector(".highest-score")
+const timerText = document.querySelector(".timer")
+const startBtn = document.querySelector(".start-btn")
+
+let score = 0;
+let highScore = 0;
+
+let isPlaying = false;
+
+
+// Button to start the game
+startBtn.addEventListener("click", function () {
+    isPlaying = true;
+})
+
+
+
+// Starting the game function
+if (isPlaying == true) {
+    gameOn();
+
+}
+
+// Game function
+function gameOn() {
+    var seconds = 30;
+
+    // Green circle movement & score keeping
+    btn.addEventListener("click", function () {
+        //  move button, keep & update score
+        moveButton();
+        keepScore();
+        updateHighScore();
+    });
+}
 
 
 
@@ -31,14 +71,6 @@ function tickingSeconds() {
         clearInterval(timer);
     }
 }
-
-
-// game, listen to click on button
-btn.addEventListener("click", function () {
-    moveButton();
-    keepScore();
-    updateHighScore();
-});
 
 // moving the button to random position
 function moveButton() {

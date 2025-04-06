@@ -30,7 +30,18 @@
 
 .header {
     display: grid;
-    justify-content: center;
-    text-align: center;
+    justify-items: center;
     margin-top: 30px;
+}
+
+.start-btn {
+    margin: 20px;
+    height: 30px;
+    width: 100px;
+    border-radius: 20px;
+    border: solid greenyellow;
+}
+
+.start-btn:active {
+    border: solid pink;
 }
