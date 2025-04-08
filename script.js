@@ -29,23 +29,16 @@ const startBtn = document.querySelector(".start-btn")
 let score = 0;
 let highScore = 0;
 
-let isPlaying = false;
-
 
 // Button to start the game
 startBtn.addEventListener("click", function () {
-    isPlaying = true;
-})
-
-// Starting the game function
-if (isPlaying == true) {
     gameOn();
+    startTimer();
+});
 
-}
 
 // Game function
 function gameOn() {
-    var seconds = 30;
 
     // Green circle movement & score keeping
     btn.addEventListener("click", function () {
@@ -56,18 +49,22 @@ function gameOn() {
     });
 }
 
-
-
 // 30 second timer
-const timer = setInterval(tickingSeconds, 1000);
 
-function tickingSeconds() {
-    currentTime = seconds--;
-    timerText.textContent = "Time remaining: " + currentTime + " seconds";
+function startTimer() {
+    let seconds = 30;
 
-    if (seconds == -1) {
-        clearInterval(timer);
+    const timer = setInterval(tickingSeconds, 1000);
+    
+    function tickingSeconds() {
+        currentTime = seconds--;
+        timerText.textContent = "Time remaining: " + currentTime + " seconds";
+
+        if (seconds == -1) {
+            clearInterval(timer);
+        }
     }
+
 }
 
 // moving the button to random position
