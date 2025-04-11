@@ -40,7 +40,9 @@ function updateHighScore() {
     highScoreText.textContent = "Highest score: " + highScore;
 }
 
-highScoreText.textContent = "Highest score: " + localStorage.getItem("hs");
+if (localStorage.getItem("hs")) {
+    highScoreText.textContent = "Highest score: " + localStorage.getItem("hs");
+}
 
 // TIMER 
 function startTimer() {
